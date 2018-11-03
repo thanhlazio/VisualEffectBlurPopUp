@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					866E80DB1D8C66AE00CF6A93 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = DAB2NZFLN5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DAB2NZFLN5;
 				INFOPLIST_FILE = VisualEffect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianAdvent.VisualEffect;
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DAB2NZFLN5;
 				INFOPLIST_FILE = VisualEffect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianAdvent.VisualEffect;
@@ -297,6 +300,7 @@
 				866E80F01D8C66AF00CF6A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,12 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var addItemView: UIView!
-    
+    @IBOutlet var addItemView: UIView!    
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     var effect:UIVisualEffect!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +22,15 @@ class ViewController: UIViewController {
         visualEffectView.effect = nil
         
         addItemView.layer.cornerRadius = 5
-        
-        
     }
     
+    @IBAction func addItem(_ sender: AnyObject) {
+        animateIn()
+        
+    }
+    @IBAction func dismissPopUp(_ sender: AnyObject) {
+        animateOut()
+    }
     
     func animateIn() {
         self.view.addSubview(addItemView)
@@ -41,39 +44,21 @@ class ViewController: UIViewController {
             self.addItemView.alpha = 1
             self.addItemView.transform = CGAffineTransform.identity
         }
-        
     }
     
-    
-    func animateOut () {
+    func animateOut() {
         UIView.animate(withDuration: 0.3, animations: { 
             self.addItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.addItemView.alpha = 0
-            
-            self.visualEffectView.effect = nil
-            
-        }) { (success:Bool) in
+            self.visualEffectView.effect = nil            
+        }) { _ in
                 self.addItemView.removeFromSuperview()
         }
-    }
-    
-    
-    
-    @IBAction func addItem(_ sender: AnyObject) {
-        
-        animateIn()
-        
-    }
-    @IBAction func dismissPopUp(_ sender: AnyObject) {
-        
-        animateOut()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
